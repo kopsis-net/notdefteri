@@ -43,5 +43,9 @@
     "app_store": {
         "categories": ["Productivity", "Development"],
         "tags": ["notes", "django", "python"]
+    },
+    "image": {
+        "name": "notdefteri",
+        "tag": "0.1"
     }
 } 

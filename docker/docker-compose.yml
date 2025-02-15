@@ -3,9 +3,12 @@ name: notdefteri
 
 services:
   notes_web:
+    image: notdefteri:0.1
     build:
-      context: /DATA/AppData/notdefteri
+      context: .
       dockerfile: docker/Dockerfile
+      tags:
+        - "notdefteri:0.1"
     container_name: notdefteri_web
     restart: always
     command: python manage.py runserver 0.0.0.0:8000
@@ -31,4 +34,4 @@ networks:
 
 volumes:
   notes_data:
-    name: notdefteri_data 
+    name: notdefteri_data
