@@ -10,6 +10,7 @@
     "icon": "https://raw.githubusercontent.com/kopsis-net/notdefteri/main/icon.png",
     "screenshot": "https://raw.githubusercontent.com/kopsis-net/notdefteri/main/screenshot.png",
     "platform": "linux",
+    "type": "compose",
     "architecture": ["amd64", "arm64"],
     "repository": {
         "type": "git",
