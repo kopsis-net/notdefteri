@@ -1,0 +1,35 @@
+{
+    "name": "NotDefteri",
+    "version": "1.0.0",
+    "description": "Django tabanlı basit not defteri uygulaması",
+    "main": "docker-compose.yml",
+    "title": "Not Defteri",
+    "tagline": "Notlarınızı kolayca yönetin",
+    "author": "Mustafa KOPARIR",
+    "category": "Productivity",
+    "icon": "https://raw.githubusercontent.com/kopsis-net/notdefteri/main/icon.png",
+    "screenshot": "https://raw.githubusercontent.com/kopsis-net/notdefteri/main/screenshot.png",
+    "platform": "linux",
+    "architecture": ["amd64", "arm64"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kopsis-net/notdefteri.git"
+    },
+    "port_map": {
+        "8000": "8000"
+    },
+    "volumes": [
+        {
+            "container": "/app/staticfiles",
+            "host": "${CASA_APP_DATA}/static"
+        },
+        {
+            "container": "/app/media",
+            "host": "${CASA_APP_DATA}/media"
+        },
+        {
+            "container": "/app/db",
+            "host": "${CASA_APP_DATA}/db"
+        }
+    ]
+} 
