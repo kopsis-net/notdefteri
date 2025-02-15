@@ -16,21 +16,32 @@
         "type": "git",
         "url": "https://github.com/kopsis-net/notdefteri.git"
     },
+    "web_interface": {
+        "port": 8000,
+        "path": "/"
+    },
     "port_map": {
         "8000": "8000"
     },
     "volumes": [
         {
             "container": "/app/staticfiles",
-            "host": "${CASA_APP_DATA}/static"
+            "host": "${CASA_APP_DATA}/static",
+            "description": "Statik dosyalar"
         },
         {
             "container": "/app/media",
-            "host": "${CASA_APP_DATA}/media"
+            "host": "${CASA_APP_DATA}/media",
+            "description": "Medya dosyaları"
         },
         {
             "container": "/app/db",
-            "host": "${CASA_APP_DATA}/db"
+            "host": "${CASA_APP_DATA}/db",
+            "description": "SQLite veritabanı"
         }
-    ]
+    ],
+    "app_store": {
+        "categories": ["Productivity", "Development"],
+        "tags": ["notes", "django", "python"]
+    }
 } 
